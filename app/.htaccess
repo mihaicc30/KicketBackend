@@ -1,0 +1,12 @@
+<FilesMatch ".(eot|ttf|otf|woff|woff2|svg|svgz)">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
+<IfModule authz_core_module>
+    Require all granted
+</IfModule>
+<IfModule !authz_core_module>
+    Allow from all
+</IfModule>
+<FilesMatch ".(eot|ttf|otf|woff)">
+    Header set Access-Control-Allow-Origin "*"
+</FilesMatch>
